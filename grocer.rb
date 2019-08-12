@@ -48,6 +48,7 @@ cart
 end
 
 def checkout(cart, coupons)
+<<<<<<< HEAD
   base_check = consolidate_cart(cart)
   coupons_check = apply_coupons(base_check, coupons)
   discount_check = apply_clearance(coupons_check)
@@ -60,4 +61,11 @@ def checkout(cart, coupons)
     total *= 0.9
 end
 total
+=======
+  #binding.pry
+  base_check = consolidate_cart(cart)
+  base_check.each do |item|
+    base_check[item][:count] * base_check[item][:price]
+end
+>>>>>>> 9e1c8b70b0e391e15415315f4f03726387c4e04e
 end
